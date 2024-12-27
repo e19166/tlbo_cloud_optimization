@@ -57,50 +57,53 @@ pip install -r requirements.txt
 ```
 
 ## ⚙️ Usage
-Running the Optimization
-Define your VM workloads in src/problem_definition.py.
-Run the main script to execute the TLBO algorithm:
-bash
-Copy code
-python src/tlbo.py
-Visualizing Results
-Open the Jupyter Notebook in the notebooks directory:
-bash
-Copy code
-jupyter notebook notebooks/visualization.ipynb
-Follow the steps to visualize workloads vs. CPU allocations.
-📊 Example Results
 
-🔍 How It Works
-Input: VM workloads and constraints.
-TLBO Algorithm:
-Teacher Phase: The best solution (teacher) improves the mean performance.
-Learner Phase: Solutions are refined through pairwise interactions.
-Output: Optimal CPU allocations that minimize cost and satisfy latency requirements.
-🧪 Running Tests
+### Running the Optimization
+
+1. Define your VM workloads in src/problem_definition.py.
+2. Run the main script to execute the TLBO algorithm:
+```bash
+python main.py
+```
+
+## 📊 Example Results
+
+![alt text](image.png)
+
+## 🔍 How It Works
+
+1. Input: VM workloads and constraints.
+2. TLBO Algorithm:
+    * Teacher Phase: The best solution (teacher) improves the mean performance.
+    * Learner Phase: Solutions are refined through pairwise interactions.
+3. Output: Optimal CPU allocations that minimize cost and satisfy latency requirements.
+
+## 🧪 Running Tests
+
 To ensure everything works as expected:
 
-bash
-Copy code
+```bash
 python -m unittest discover -s tests
-🤝 Contributing
-We welcome contributions! To get started:
+```
 
-Fork the repository.
-Create a new branch for your feature:
-bash
-Copy code
+## 🤝 Contributing
+
+I welcome contributions! To get started:
+
+1. Fork the repository.
+2. Create a new branch for your feature:
+```bash
 git checkout -b feature-name
-Commit your changes and push:
-bash
-Copy code
+```
+3. Commit your changes and push:
+```bash
 git push origin feature-name
-Open a pull request.
-📜 License
-This project is licensed under the MIT License.
+```
+4. Open a pull request.
 
-🛡️ Acknowledgments
-Inspired by the TLBO algorithm in optimization.
-Special thanks to the open-source community for tools and libraries.
-🌟 Support
+## 🛡️ Acknowledgments
+* Inspired by the TLBO algorithm in optimization.
+* Special thanks to the open-source community for tools and libraries.
+
+## 🌟 Support
 If you found this project useful, please ⭐ the repository and share it with your peers!
